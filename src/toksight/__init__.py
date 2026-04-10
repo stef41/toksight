@@ -1,5 +1,7 @@
 """toksight — tokenizer analysis toolkit."""
 
+__version__ = "0.2.0"
+
 from toksight._types import (
     AuditFinding,
     AuditResult,
