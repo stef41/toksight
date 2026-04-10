@@ -20,6 +20,7 @@ from toksight.loader import (
     load_sentencepiece,
     wrap_custom,
 )
+from toksight.gguf import load_gguf
 
 __all__ = [
     "AuditFinding",
@@ -34,6 +35,7 @@ __all__ = [
     "TokenSpan",
     "ToksightError",
     "VocabStats",
+    "load_gguf",
     "load_huggingface",
     "load_sentencepiece",
     "load_tiktoken",
