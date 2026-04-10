@@ -28,6 +28,13 @@ from toksight.diff import (
     format_diff_text,
     token_diff,
 )
+from toksight.training_coverage import (
+    CoverageEstimate,
+    DomainCoverageResult,
+    estimate_coverage,
+    domain_coverage,
+    format_coverage_report,
+)
 
 __all__ = [
     "AuditFinding",
@@ -52,4 +59,9 @@ __all__ = [
     "load_tiktoken",
     "token_diff",
     "wrap_custom",
+    "CoverageEstimate",
+    "DomainCoverageResult",
+    "estimate_coverage",
+    "domain_coverage",
+    "format_coverage_report",
 ]
