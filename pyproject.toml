@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "toksight"
+version = "0.1.0"
+description = "Tokenizer analysis toolkit. Compare vocabulary coverage, compression ratios, and token boundaries across GPT-4o, Llama 3, Mistral, and any HuggingFace tokenizer."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+authors = [{ name = "Zacharie Bhatti" }]
+keywords = [
+    "tokenizer",
+    "analysis",
+    "comparison",
+    "vocabulary",
+    "compression",
+    "llm",
+    "nlp",
+    "tiktoken",
+    "sentencepiece",
+    "multilingual",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+tiktoken = ["tiktoken>=0.5"]
+transformers = ["transformers>=4.30", "tokenizers>=0.15"]
+sentencepiece = ["sentencepiece>=0.1.99"]
+all = ["toksight[tiktoken,transformers,sentencepiece]"]
+cli = ["click>=8.0", "rich>=13.0"]
+dev = ["toksight[all,cli]"]
+
+[project.urls]
+Homepage = "https://github.com/stef41/toksight"
+Repository = "https://github.com/stef41/toksight"
+Issues = "https://github.com/stef41/toksight/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/toksight"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 99
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
