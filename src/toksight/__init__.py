@@ -37,6 +37,19 @@ from toksight.training_coverage import (
     domain_coverage,
     format_coverage_report,
 )
+from toksight.benchmark import (
+    BenchmarkConfig,
+    BenchmarkResult,
+    TokenizerBenchmark,
+    format_benchmark_report,
+    generate_benchmark_texts,
+)
+from toksight.overlap import (
+    OverlapResult,
+    VocabOverlapAnalyzer,
+    format_overlap_report,
+    overlap_matrix,
+)
 
 __all__ = [
     "AuditFinding",
@@ -66,4 +79,13 @@ __all__ = [
     "estimate_coverage",
     "domain_coverage",
     "format_coverage_report",
+    "BenchmarkConfig",
+    "BenchmarkResult",
+    "TokenizerBenchmark",
+    "format_benchmark_report",
+    "generate_benchmark_texts",
+    "OverlapResult",
+    "VocabOverlapAnalyzer",
+    "format_overlap_report",
+    "overlap_matrix",
 ]
