@@ -21,6 +21,13 @@ from toksight.loader import (
     wrap_custom,
 )
 from toksight.gguf import load_gguf
+from toksight.diff import (
+    TokenDiffResult,
+    format_diff_html,
+    format_diff_inline,
+    format_diff_text,
+    token_diff,
+)
 
 __all__ = [
     "AuditFinding",
@@ -29,15 +36,20 @@ __all__ = [
     "CompressionStats",
     "CostEstimate",
     "CoverageResult",
+    "TokenDiffResult",
     "TokenizerBackend",
     "TokenizerInfo",
     "TokenizerWrapper",
     "TokenSpan",
     "ToksightError",
     "VocabStats",
+    "format_diff_html",
+    "format_diff_inline",
+    "format_diff_text",
     "load_gguf",
     "load_huggingface",
     "load_sentencepiece",
     "load_tiktoken",
+    "token_diff",
     "wrap_custom",
 ]
